@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Samriddhi ❤️</title>
+<style>
+  /* Animated gradient background */
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+    overflow: hidden;
+    color: #fff;
+  }
+
+  @keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+  /* Heartful message container */
+  .container {
+    max-width: 600px;
+    padding: 30px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    animation: fadeIn 2s ease forwards;
+  }
+
+  /* Animations */
+  @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+  @keyframes slideUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+  @keyframes glowText { 0%,100% {text-shadow:0 0 10px #fff;} 50% {text-shadow:0 0 30px #fff;} }
+  @keyframes pulse { 0%,100% {transform:scale(1);} 50% {transform:scale(1.05);} }
+  @keyframes float { 0%,100% {transform:translateY(0);} 50% {transform:translateY(-10px);} }
+  @keyframes popLetter { 0% {opacity:0; transform:translateY(10px) scale(0.9);} 100% {opacity:1; transform:translateY(0) scale(1);} }
+  @keyframes swing { 0%,100% {transform:rotate(0deg);} 25% {transform:rotate(4deg);} 75% {transform:rotate(-4deg);} }
+  @keyframes shimmer { 0% {background-position:-200px 0;} 100% {background-position:200px 0;} }
+  @keyframes fadeSlide { 0% {opacity:0; transform:translateY(30px);} 100% {opacity:1; transform:translateY(0);} }
+  @keyframes floatHeart { 0% {transform:translateY(0) scale(1);} 50% {transform:translateY(-6px) scale(1.05);} 100% {transform:translateY(0) scale(1);} }
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: glowText 3s ease-in-out infinite;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    animation: slideUp 1s ease forwards;
+  }
+
+  span.letter {
+    display: inline-block;
+    animation: popLetter 0.5s ease forwards;
+  }
+
+  .heart {
+    color: #ff6b6b;
+    font-size: 1.3em;
+    display: inline-block;
+    animation: floatHeart 2s ease-in-out infinite;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>To My Dearest Samriddhi <span class="heart">❤️</span></h1>
+    <p id="msg"></p>
+  </div>
+
+  <script>
+    const message = "I don't say this often, but you mean the world to me. You're not just my sister — you're my little piece of peace. No matter how chaotic life gets, just knowing you're there brings comfort. You've grown into someone I deeply admire — kind, strong, and full of light. I couldn't be prouder to call you my sister. No matter where life takes us, remember this — you'll always have me. Love you always, — Armaan";
+    
+    const msgEl = document.getElementById('msg');
+    // Split into letters and wrap each in span
+    message.split('').forEach((ch, i) => {
+      const span = document.createElement('span');
+      span.textContent = ch;
+      span.className = 'letter';
+      span.style.animationDelay = (i * 0.03) + 's';
+      msgEl.appendChild(span);
+    });
+  </script>
+</body>
+</html>
